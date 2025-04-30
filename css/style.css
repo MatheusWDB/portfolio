@@ -1,140 +1,124 @@
+/* Estilo base: mobile-first (até 480px) */
+/* ----------------------------------ALL---------------------------------- */
+body {
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.section-title,
+.navbar__link:hover,
+.hero__title,
+.project-card__button a:hover {
+  color: rgb(190, 124, 0);
+}
+
 header,
 main,
 main section {
-  margin-bottom: 50px;
+  margin-bottom: 4rem;
 }
 
-main {
-  width: 90%;
-  margin: auto;
+p {
+  text-indent: 1.5rem;
+  line-height: 1.5;
+  hyphens: auto;
 }
 
 .section-title {
-  font-size: 35.2px;
-  color: rgb(190, 124, 0);
-  margin-bottom: 20px;
+  font-size: 3rem;
+}
+
+.section-title,
+.footer__socials {
+  margin-bottom: 1.25rem;
+}
+
+.navbar,
+.footer {
+  width: 100%;
 }
 
 /* ----------------------------------HEADER---------------------------------- */
 
 /* NAVBAR */
 .navbar {
-  background-color: #fff;
-  padding: 1rem 2rem;
-  margin-bottom: 80px;
-}
-
-.navbar__links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
-
-.navbar__item {
-}
-
-.navbar__link {
-  text-decoration: none;
-  color: #333;
-  font-size: 1.1rem;
-  transition: color 0.3s;
-}
-
-.navbar__link:hover {
-  color: rgb(190, 124, 0);
-  transform: scale(1.05);
-  transition: 0.2s;
+  display: none;
 }
 
 /* HERO */
 .hero {
-  background-color: #fff;
-  padding: 5px;
-  margin-bottom: 50px;
+  margin-bottom: 3rem;
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 2rem;
 }
 
 .hero__content {
-  width: 455px;
+  padding-top: 1rem;
+  width: 65%;
 }
 
 .hero__title {
   font-weight: bold;
-  font-size: 55px;
-  color: rgb(190, 124, 0);
+  font-size: 4rem;
 }
 
 .hero__subtitle {
-  margin-block: 35px;
+  margin-block: 2.188rem;
+  font-size: 1.75rem;
+  hyphens: auto;
 }
 
 .hero__buttons {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
-  padding: 5px;
+  gap: 1rem;
 }
 
 .btn button {
-  padding: 10px;
-  font-size: 18px;
+  padding: 0.5rem;
+  font-size: 1rem;
   font-weight: 500;
   background-color: rgb(190, 124, 0);
-  border: 0;
   border-radius: 10px;
   cursor: pointer;
   transition: 0.2s;
 }
 
 .btn button:hover {
-  box-shadow: 0px 0px 8px rgba(190, 123, 0, 0.493);
+  box-shadow: 0 0 8px rgba(190, 123, 0, 0.493);
   transform: scale(1.05);
 }
 
 .hero__image {
+  padding-top: 1rem;
   position: relative;
   animation: flutuar 2s ease-in-out infinite alternate;
 }
 
-.hero__image > img {
-  border-radius: 50%;
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-}
-
 @keyframes flutuar {
   0% {
-    top: -15px;
+    top: -1rem;
   }
 
   100% {
-    top: 15px;
+    top: 1rem;
   }
 }
 
-/* ----------------------------------MAIN---------------------------------- */
-
-/* ABOUT */
-.about {
-  padding: 5px;
+.hero__image > img {
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
 }
 
+/* ----------------------------------MAIN---------------------------------- */
+/* ABOUT */
 .about__text {
-  text-indent: 15px;
-  line-height: 1.5;
+  font-size: 1.15rem;
 }
 
 /* PROJECTS */
-.projects {
-  padding: 5px;
-  background-color: #fff;
-}
-
 .projects__grid {
   display: flex;
   justify-content: space-evenly;
@@ -147,12 +131,12 @@ main {
   background-color: rgba(190, 123, 0, 0.027);
   border: 1px solid rgb(190, 124, 0);
   border-radius: 20px;
-  padding: 5px;
-  margin-right: 25px;
+  padding: 0.3rem;
+  margin-right: 1.5rem;
   flex: 0 0 auto; /* Faz o card NÃO encolher, e ficar do tamanho que você definir */
   scroll-snap-align: start; /* faz o card "grudar" certinho no começo ao rolar */
-  width: 300px;
-  height: 530px;
+  width: 20rem;
+  height: 80vh;
 }
 
 .project-card__image {
@@ -161,60 +145,53 @@ main {
 }
 
 .project-card__image > img {
-  height: 200px;
+  height: 12.5rem;
   width: auto;
   object-fit: contain;
 }
 
 .project-card__title {
   justify-self: center;
-  font-size: 22.528px;
-  margin-block: 5px;
+  font-size: 1.75rem;
+  margin-block: 0.313rem;
 }
 
 .project-card__description {
-  padding: 5px;
-  text-indent: 25px;
-  height: 155px;
-  hyphens: auto;
-  line-height: 1.4;
+  font-size: 1rem;
+  height: 9rem;
 }
 
 .project-card__techs {
   display: flex;
   justify-content: start;
   align-items: center;
-  margin-block: 10px;
+  margin-block: 0.625rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding-bottom: 15px;
-  height: 80px;
+  padding-bottom: 0.938rem;
+  height: 5rem;
 }
 
 .project-card__techs img {
-  padding: 5px;
+  padding: 0.313rem;
   border: 1px solid #333;
-  margin-right: 20px;
-  width: 50px;
+  margin-right: 1.25rem;
+  width: 3.125rem;
   height: auto;
 }
 
 .project-card__button {
   display: flex;
   justify-content: center;
+  font-size: 1rem;
 }
 
 .project-card__button a:hover {
-  color: rgb(190, 124, 0);
   transform: scale(1.05);
   transition: 0.2s;
 }
 
 /* SKILLS */
-.skills {
-  padding: 5px;
-}
-
 .skills__grid {
   display: flex;
   justify-content: space-evenly;
@@ -225,34 +202,23 @@ main {
 
 .skills__item {
   border: 1px solid rgb(190, 124, 0);
-  padding: 5px;
+  padding: 0.3rem;
   border-radius: 10px;
-  margin-right: 15px;
+  margin-right: 1rem;
   flex: 0 0 auto; /* Faz o card NÃO encolher, e ficar do tamanho que você definir */
   scroll-snap-align: start; /* faz o card "grudar" certinho no começo ao rolar */
 }
 
 .skills__item img {
-  height: 100px;
+  height: 6.25rem;
 }
 
 /* ----------------------------------FOOTER---------------------------------- */
-
-.footer {
-  background-color: #fff;
-  width: 100%;
-  padding: 5px 5.001%;
-}
-
-.footer__title {
-}
-
 .footer__socials {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 100px;
-  margin-bottom: 20px;
+  height: 6.25rem;
 }
 
 .tooltip {
@@ -261,7 +227,7 @@ main {
 }
 
 .tooltip > a > img {
-  width: 50px;
+  width: 3.25rem;
   height: auto;
 }
 
@@ -270,7 +236,7 @@ main {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 4px 8px;
+  padding: 0.25rem 0.5rem;
   border-radius: 4px;
   position: absolute;
   z-index: 1;
@@ -279,11 +245,707 @@ main {
   transform: translateX(-50%);
   opacity: 0;
   transition: opacity 0.3s;
-  font-size: 12px;
+  font-size: 0.75rem;
   white-space: nowrap;
 }
 
 .tooltip:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
+}
+
+/* Mobile médio (481px a 768px) */
+@media (min-width: 481px) {
+  /* ----------------------------------ALL---------------------------------- */
+  header,
+  main,
+  main section {
+    margin-bottom: 3.125rem;
+  }
+
+  main {
+    width: 90vw;
+    margin: auto;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .section-title,
+  .footer__socials {
+    margin-bottom: 1.25rem;
+  }
+
+  .navbar,
+  .footer {
+    width: 100%;
+  }
+
+  /* ----------------------------------HEADER---------------------------------- */
+
+  /* NAVBAR */
+  .navbar {
+    display: inline;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .navbar__link {
+    color: #333;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+
+  .navbar__link:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 7.813rem 0.313rem 0.313rem 0.313rem;
+    margin-bottom: 3.125rem;
+    align-items: center;
+    gap: 10rem;
+  }
+
+  .hero__content {
+    width: 28%;
+  }
+
+  .hero__title {
+    font-size: 3.438rem;
+  }
+
+  .hero__subtitle {
+    margin-block: 2.188rem;
+  }
+
+  .hero__buttons {
+    justify-content: space-evenly;
+    padding: 0.313rem;
+  }
+
+  .btn button {
+    padding: 0.625rem;
+    font-size: 1.125rem;
+  }
+
+  .hero__image {
+    animation: flutuar1441px 2s ease-in-out infinite alternate;
+  }
+
+  .hero__image > img {
+    width: 15.625rem;
+    height: 15.625rem;
+  }
+
+  @keyframes flutuar1441px {
+    0% {
+      top: -0.938rem;
+    }
+
+    100% {
+      top: 0.938rem;
+    }
+  }
+
+  /* ----------------------------------MAIN---------------------------------- */
+
+  /* ABOUT */
+  .about {
+    padding: 0.313rem;
+    scroll-margin-top: 5.75rem;
+  }
+
+  .about__text {
+    text-indent: 0.938rem;
+    line-height: 1.5;
+  }
+
+  /* PROJECTS */
+  .projects {
+    padding: 0.313rem;
+    scroll-margin-top: 5.75rem; /* altura da navbar */
+  }
+
+  .project-card {
+    padding: 0.313rem;
+    margin-right: 1.563rem;
+    width: 18.75rem;
+    height: 33.125rem;
+  }
+
+  .project-card__image > img {
+    height: 12.5rem;
+  }
+
+  .project-card__title {
+    font-size: 1.408rem;
+    margin-block: 0.313rem;
+  }
+
+  .project-card__description {
+    padding: 0.313rem;
+    text-indent: 1.563rem;
+    height: 9.688rem;
+    line-height: 1.4;
+  }
+
+  .project-card__techs img {
+    padding: 0.313rem;
+    margin-right: 1.25rem;
+    width: 3.125rem;
+  }
+
+  /* SKILLS */
+  .skills {
+    padding: 0.313rem;
+    scroll-margin-top: 5.75rem; /* altura da navbar */
+  }
+
+  /* ----------------------------------FOOTER---------------------------------- */
+
+  .footer {
+    padding: 0.313rem 5.001%;
+  }
+
+  .tooltip > a > img {
+    width: 3.125rem;
+  }
+}
+
+/* Tablet (769px a 1024px) */
+@media (min-width: 769px) {
+  /* ----------------------------------ALL---------------------------------- */
+  header,
+  main,
+  main section {
+    margin-bottom: 3.125rem;
+  }
+
+  main {
+    width: 90vw;
+    margin: auto;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .section-title,
+  .footer__socials {
+    margin-bottom: 1.25rem;
+  }
+
+  .navbar,
+  .footer {
+    width: 100%;
+  }
+
+  /* ----------------------------------HEADER---------------------------------- */
+
+  /* NAVBAR */
+  .navbar {
+    display: inline;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .navbar__link {
+    color: #333;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+
+  .navbar__link:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 7.813rem 0.313rem 0.313rem 0.313rem;
+    margin-bottom: 3.125rem;
+    align-items: center;
+    gap: 10rem;
+  }
+
+  .hero__content {
+    width: 28%;
+  }
+
+  .hero__title {
+    font-size: 3.438rem;
+  }
+
+  .hero__subtitle {
+    margin-block: 2.188rem;
+  }
+
+  .hero__buttons {
+    justify-content: space-evenly;
+    padding: 0.313rem;
+  }
+
+  .btn button {
+    padding: 0.625rem;
+    font-size: 1.125rem;
+  }
+
+  .hero__image {
+    animation: flutuar1441px 2s ease-in-out infinite alternate;
+  }
+
+  .hero__image > img {
+    width: 15.625rem;
+    height: 15.625rem;
+  }
+
+  @keyframes flutuar1441px {
+    0% {
+      top: -0.938rem;
+    }
+
+    100% {
+      top: 0.938rem;
+    }
+  }
+
+  /* ----------------------------------MAIN---------------------------------- */
+
+  /* ABOUT */
+  .about {
+    padding: 0.313rem;
+    scroll-margin-top: 5.75rem;
+  }
+
+  .about__text {
+    text-indent: 0.938rem;
+    line-height: 1.5;
+  }
+
+  /* PROJECTS */
+  .projects {
+    padding: 0.313rem;
+    scroll-margin-top: 5.75rem; /* altura da navbar */
+  }
+
+  .project-card {
+    padding: 0.313rem;
+    margin-right: 1.563rem;
+    width: 18.75rem;
+    height: 33.125rem;
+  }
+
+  .project-card__image > img {
+    height: 12.5rem;
+  }
+
+  .project-card__title {
+    font-size: 1.408rem;
+    margin-block: 0.313rem;
+  }
+
+  .project-card__description {
+    padding: 0.313rem;
+    text-indent: 1.563rem;
+    height: 9.688rem;
+    line-height: 1.4;
+  }
+
+  .project-card__techs img {
+    padding: 0.313rem;
+    margin-right: 1.25rem;
+    width: 3.125rem;
+  }
+
+  /* SKILLS */
+  .skills {
+    padding: 0.313rem;
+    scroll-margin-top: 5.75rem; /* altura da navbar */
+  }
+
+  /* ----------------------------------FOOTER---------------------------------- */
+
+  .footer {
+    padding: 0.313rem 5.001%;
+  }
+
+  .tooltip > a > img {
+    width: 3.125rem;
+  }
+}
+
+/* Desktop padrão (1025px a 1440px) */
+@media (min-width: 1025px) {
+  /* ----------------------------------ALL---------------------------------- */
+  header,
+  main,
+  main section {
+    margin-bottom: 3.125rem;
+  }
+
+  main {
+    width: 90vw;
+    margin: auto;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .section-title,
+  .footer__socials {
+    margin-bottom: 1.25rem;
+  }
+
+  .navbar,
+  .footer {
+    width: 100%;
+  }
+
+  /* ----------------------------------HEADER---------------------------------- */
+
+  /* NAVBAR */
+  .navbar {
+    display: inline;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .navbar__link {
+    color: #333;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+
+  .navbar__link:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 7.813rem 0.313rem 0.313rem 0.313rem;
+    margin-bottom: 3.125rem;
+    align-items: center;
+    gap: 10rem;
+  }
+
+  .hero__content {
+    width: 28%;
+  }
+
+  .hero__title {
+    font-size: 3.438rem;
+  }
+
+  .hero__subtitle {
+    margin-block: 2.188rem;
+  }
+
+  .hero__buttons {
+    justify-content: space-evenly;
+    padding: 0.313rem;
+  }
+
+  .btn button {
+    padding: 0.625rem;
+    font-size: 1.125rem;
+  }
+
+  .hero__image {
+    animation: flutuar1441px 2s ease-in-out infinite alternate;
+  }
+
+  .hero__image > img {
+    width: 15.625rem;
+    height: 15.625rem;
+  }
+
+  @keyframes flutuar1441px {
+    0% {
+      top: -0.938rem;
+    }
+
+    100% {
+      top: 0.938rem;
+    }
+  }
+
+  /* ----------------------------------MAIN---------------------------------- */
+
+  /* ABOUT */
+  .about {
+    padding: 0.313rem;
+    scroll-margin-top: 5.75rem;
+  }
+
+  .about__text {
+    text-indent: 0.938rem;
+    line-height: 1.5;
+  }
+
+  /* PROJECTS */
+  .projects {
+    padding: 0.313rem;
+    scroll-margin-top: 5.75rem; /* altura da navbar */
+  }
+
+  .project-card {
+    padding: 0.313rem;
+    margin-right: 1.563rem;
+    width: 18.75rem;
+    height: 33.125rem;
+  }
+
+  .project-card__image > img {
+    height: 12.5rem;
+  }
+
+  .project-card__title {
+    font-size: 1.408rem;
+    margin-block: 0.313rem;
+  }
+
+  .project-card__description {
+    padding: 0.313rem;
+    text-indent: 1.563rem;
+    height: 9.688rem;
+    line-height: 1.4;
+  }
+
+  .project-card__techs img {
+    padding: 0.313rem;
+    margin-right: 1.25rem;
+    width: 3.125rem;
+  }
+
+  /* SKILLS */
+  .skills {
+    padding: 0.313rem;
+    scroll-margin-top: 5.75rem; /* altura da navbar */
+  }
+
+  /* ----------------------------------FOOTER---------------------------------- */
+
+  .footer {
+    padding: 0.313rem 5.001%;
+  }
+
+  .tooltip > a > img {
+    width: 3.125rem;
+  }
+}
+
+/* Telas grandes (1441px ou mais) */
+@media (min-width: 1441px) {
+  /* ----------------------------------ALL---------------------------------- */
+  header,
+  main,
+  main section {
+    margin-bottom: 3.125rem;
+  }
+
+  main {
+    width: 90vw;
+    margin: auto;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .section-title,
+  .footer__socials {
+    margin-bottom: 1.25rem;
+  }
+
+  .navbar,
+  .footer {
+    width: 100%;
+  }
+
+  /* ----------------------------------HEADER---------------------------------- */
+
+  /* NAVBAR */
+  .navbar {
+    display: inline;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .navbar__link {
+    color: #333;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+
+  .navbar__link:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 7.813rem 0.313rem 0.313rem 0.313rem;
+    margin-bottom: 3.125rem;
+    align-items: center;
+    gap: 10rem;
+  }
+
+  .hero__content {
+    width: 28%;
+  }
+
+  .hero__title {
+    font-size: 3.438rem;
+  }
+
+  .hero__subtitle {
+    margin-block: 2.188rem;
+  }
+
+  .hero__buttons {
+    justify-content: space-evenly;
+    padding: 0.313rem;
+  }
+
+  .btn button {
+    padding: 0.625rem;
+    font-size: 1.125rem;
+  }
+
+  .hero__image {
+    animation: flutuar1441px 2s ease-in-out infinite alternate;
+  }
+
+  .hero__image > img {
+    width: 15.625rem;
+    height: 15.625rem;
+  }
+
+  @keyframes flutuar1441px {
+    0% {
+      top: -0.938rem;
+    }
+
+    100% {
+      top: 0.938rem;
+    }
+  }
+
+  /* ----------------------------------MAIN---------------------------------- */
+
+  /* ABOUT */
+  .about {
+    padding: 0.313rem;
+    scroll-margin-top: 5.75rem;
+  }
+
+  .about__text {
+    text-indent: 0.938rem;
+    line-height: 1.5;
+  }
+
+  /* PROJECTS */
+  .projects {
+    padding: 0.313rem;
+    scroll-margin-top: 5.75rem; /* altura da navbar */
+  }
+
+  .project-card {
+    padding: 0.313rem;
+    margin-right: 1.563rem;
+    width: 18.75rem;
+    height: 33.125rem;
+  }
+
+  .project-card__image > img {
+    height: 12.5rem;
+  }
+
+  .project-card__title {
+    font-size: 1.408rem;
+    margin-block: 0.313rem;
+  }
+
+  .project-card__description {
+    padding: 0.313rem;
+    text-indent: 1.563rem;
+    height: 9.688rem;
+    line-height: 1.4;
+  }
+
+  .project-card__techs img {
+    padding: 0.313rem;
+    margin-right: 1.25rem;
+    width: 3.125rem;
+  }
+
+  /* SKILLS */
+  .skills {
+    padding: 0.313rem;
+    scroll-margin-top: 5.75rem; /* altura da navbar */
+  }
+
+  /* ----------------------------------FOOTER---------------------------------- */
+
+  .footer {
+    padding: 0.313rem 5.001%;
+  }
+
+  .tooltip > a > img {
+    width: 3.125rem;
+  }
 }
