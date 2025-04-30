@@ -15,7 +15,7 @@ body {
 header,
 main,
 main section {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 p {
@@ -25,7 +25,7 @@ p {
 }
 
 .section-title {
-  font-size: 3rem;
+  font-size: 1.5rem;
 }
 
 .section-title,
@@ -49,32 +49,32 @@ p {
 .hero {
   margin-bottom: 3rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .hero__content {
   padding-top: 1rem;
-  width: 65%;
+  width: 70%;
 }
 
 .hero__title {
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 .hero__subtitle {
-  margin-block: 2.188rem;
-  font-size: 1.75rem;
+  margin-block: 1rem;
+  font-size: 1.25rem;
   hyphens: auto;
 }
 
 .hero__buttons {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+  justify-self: center;
 }
 
 .btn button {
+  width: 10rem;
+  margin-block: 0.5rem;
   padding: 0.5rem;
   font-size: 1rem;
   font-weight: 500;
@@ -107,8 +107,8 @@ p {
 
 .hero__image > img {
   border-radius: 50%;
-  width: 10rem;
-  height: 10rem;
+  width: 5rem;
+  height: 5rem;
   object-fit: cover;
 }
 
@@ -135,8 +135,8 @@ p {
   margin-right: 1.5rem;
   flex: 0 0 auto; /* Faz o card NÃO encolher, e ficar do tamanho que você definir */
   scroll-snap-align: start; /* faz o card "grudar" certinho no começo ao rolar */
-  width: 20rem;
-  height: 33.25rem;
+  width: 15rem;
+  height: 30rem;
 }
 
 .project-card__image {
@@ -145,37 +145,36 @@ p {
 }
 
 .project-card__image > img {
-  height: 12.5rem;
+  height: 7.5rem;
   width: auto;
   object-fit: contain;
 }
 
 .project-card__title {
   justify-self: center;
-  font-size: 1.75rem;
-  margin-block: 0.313rem;
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
 }
 
 .project-card__description {
   font-size: 1rem;
-  height: 9rem;
+  height: 12rem;
 }
 
 .project-card__techs {
   display: flex;
   justify-content: start;
   align-items: center;
-  margin-block: 0.625rem;
+  margin-block: 0.75rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding-bottom: 0.938rem;
-  height: 5rem;
+  padding-bottom: 1rem;
 }
 
 .project-card__techs img {
   padding: 0.313rem;
   border: 1px solid #333;
-  margin-right: 1.25rem;
+  margin-right: 1rem;
   width: 3.125rem;
   height: auto;
 }
