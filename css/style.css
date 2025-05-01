@@ -78,21 +78,12 @@ p,
 .skills__grid {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-}
-
-.projects__grid,
-.project-card__techs,
-.skills__grid {
   padding-bottom: 1rem;
 }
 
 .btn button:hover,
 .project-card__button a:hover {
   transform: scale(1.05);
-}
-
-.btn button,
-.project-card__button a:hover {
   transition: 0.2s;
 }
 
@@ -105,11 +96,9 @@ p,
 .project-card,
 .skills__item {
   border: 1px solid rgb(190, 124, 0);
-}
-
-.project-card,
-.skills__item {
   padding: 0.3rem;
+  flex: 0 0 auto; /* Faz o card NÃO encolher, e ficar do tamanho que você definir */
+  scroll-snap-align: start; /* faz o card "grudar" certinho no começo ao rolar */
 }
 
 .btn button,
@@ -120,12 +109,6 @@ p,
 .project-card__techs img,
 .skills__item {
   margin-right: 1rem;
-}
-
-.project-card,
-.skills__item {
-  flex: 0 0 auto; /* Faz o card NÃO encolher, e ficar do tamanho que você definir */
-  scroll-snap-align: start; /* faz o card "grudar" certinho no começo ao rolar */
 }
 
 .project-card__techs,
@@ -147,8 +130,8 @@ p,
 .tooltip > a > img {
   height: auto;
 }
-/* ----------------------------------HEADER---------------------------------- */
 
+/* ----------------------------------HEADER---------------------------------- */
 /* NAVBAR */
 .navbar {
   display: none;
@@ -214,7 +197,6 @@ p,
 }
 
 /* PROJECTS */
-
 .project-card {
   background-color: rgba(190, 123, 0, 0.027);
   border-radius: 20px;
@@ -256,10 +238,7 @@ p,
   justify-content: center;
 }
 
-/* SKILLS */
-
 /* ----------------------------------FOOTER---------------------------------- */
-
 .tooltip {
   display: inline-block;
 }
@@ -293,6 +272,7 @@ p,
 
 /* Tablet (481px a 768px) */
 @media (min-width: 481px) {
+  /* ----------------------------------HEADER---------------------------------- */
   /* HERO */
   .hero__content {
     width: 75%;
@@ -313,11 +293,13 @@ p,
 
 /* Tablet (769px a 1024px) */
 @media (min-width: 769px) {
+  /* ----------------------------------ALL---------------------------------- */
   .navbar__links,
   .hero {
     align-items: center;
   }
 
+  /* ----------------------------------HEADER---------------------------------- */
   /* NAVBAR */
   .navbar {
     display: inline;
@@ -394,8 +376,14 @@ p,
     font-size: 2.2rem;
   }
 
-  /* ----------------------------------HEADER---------------------------------- */
+  .about,
+  .projects,
+  .skills {
+    padding: 0.313rem;
+    scroll-margin-top: 5.75rem; /* altura da navbar */
+  }
 
+  /* ----------------------------------HEADER---------------------------------- */
   /* HERO */
   .hero {
     justify-content: center;
@@ -404,10 +392,6 @@ p,
 
   .hero__content {
     width: 50%;
-  }
-
-  .hero__title {
-    font-size: 3.438rem;
   }
 
   .hero__buttons {
@@ -421,24 +405,13 @@ p,
   }
 
   /* ----------------------------------MAIN---------------------------------- */
-
   /* ABOUT */
-  .about {
-    padding: 0.313rem;
-    scroll-margin-top: 5.75rem;
-  }
-
   .about__text {
     text-indent: 0.938rem;
     line-height: 1.5;
   }
 
   /* PROJECTS */
-  .projects {
-    padding: 0.313rem;
-    scroll-margin-top: 5.75rem; /* altura da navbar */
-  }
-
   .project-card {
     padding: 0.313rem;
     width: 18.75rem;
@@ -461,94 +434,17 @@ p,
     line-height: 1.4;
   }
 
-  /* SKILLS */
-  .skills {
-    padding: 0.313rem;
-    scroll-margin-top: 5.75rem; /* altura da navbar */
-  }
-
   /* ----------------------------------FOOTER---------------------------------- */
-
   .footer {
     padding: 0.313rem 5.001%;
-  }
-
-  .tooltip > a > img {
-    width: 3.125rem;
   }
 }
 
 /* Desktop (1441px ou mais) */
 @media (min-width: 1441px) {
-  /* ----------------------------------ALL---------------------------------- */
-
-  main {
-    width: 90vw;
-    margin: auto;
-  }
-
   /* ----------------------------------HEADER---------------------------------- */
-
   /* HERO */
   .hero__content {
     width: 28%;
-  }
-
-  .hero__title {
-    font-size: 3.438rem;
-  }
-
-  .hero__buttons {
-    padding: 1rem;
-  }
-
-  /* ----------------------------------MAIN---------------------------------- */
-
-  /* ABOUT */
-  .about {
-    padding: 0.313rem;
-    scroll-margin-top: 5.75rem;
-  }
-
-  .about__text {
-    text-indent: 0.938rem;
-    line-height: 1.5;
-  }
-
-  /* PROJECTS */
-  .projects {
-    padding: 0.313rem;
-    scroll-margin-top: 5.75rem; /* altura da navbar */
-  }
-
-  .project-card__image > img {
-    height: 12.5rem;
-  }
-
-  .project-card__title {
-    font-size: 1.408rem;
-    margin-block: 0.313rem;
-  }
-
-  .project-card__description {
-    padding: 0.313rem;
-    text-indent: 1.563rem;
-    height: 9.688rem;
-    line-height: 1.4;
-  }
-
-  /* SKILLS */
-  .skills {
-    padding: 0.313rem;
-    scroll-margin-top: 5.75rem; /* altura da navbar */
-  }
-
-  /* ----------------------------------FOOTER---------------------------------- */
-  .footer {
-    padding: 0.313rem 5.001%;
-  }
-
-  .tooltip > a > img {
-    width: 3.125rem;
   }
 }
