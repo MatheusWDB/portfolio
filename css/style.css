@@ -21,7 +21,16 @@ main section {
 p {
   text-indent: 1.5rem;
   line-height: 1.5;
+}
+
+p,
+.hero__subtitle {
   hyphens: auto;
+}
+
+.hero__content,
+.hero__image {
+  padding-top: 1rem;
 }
 
 .section-title {
@@ -38,6 +47,106 @@ p {
   width: 100%;
 }
 
+.hero,
+.projects__grid,
+.project-card__techs,
+.project-card__button,
+.skills__grid,
+.footer__socials {
+  display: flex;
+}
+
+.hero__buttons,
+.project-card__image,
+.project-card__title {
+  justify-self: center;
+}
+
+.hero__subtitle,
+.project-card__title {
+  font-size: 1.25rem;
+}
+
+.btn button,
+.project-card__description,
+.project-card__button {
+  font-size: 1rem;
+}
+
+.projects__grid,
+.project-card__techs,
+.skills__grid {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.projects__grid,
+.project-card__techs,
+.skills__grid {
+  padding-bottom: 1rem;
+}
+
+.btn button:hover,
+.project-card__button a:hover {
+  transform: scale(1.05);
+}
+
+.btn button,
+.project-card__button a:hover {
+  transition: 0.2s;
+}
+
+.projects__grid,
+.skills__grid,
+.footer__socials {
+  justify-content: space-evenly;
+}
+
+.project-card,
+.skills__item {
+  border: 1px solid rgb(190, 124, 0);
+}
+
+.project-card,
+.skills__item {
+  padding: 0.3rem;
+}
+
+.btn button,
+.skills__item {
+  border-radius: 10px;
+}
+
+.project-card__techs img,
+.skills__item {
+  margin-right: 1rem;
+}
+
+.project-card,
+.skills__item {
+  flex: 0 0 auto; /* Faz o card NÃO encolher, e ficar do tamanho que você definir */
+  scroll-snap-align: start; /* faz o card "grudar" certinho no começo ao rolar */
+}
+
+.project-card__techs,
+.footer__socials {
+  align-items: center;
+}
+
+.skills__item img,
+.footer__socials {
+  height: 6.25rem;
+}
+
+.hero__image,
+.tooltip {
+  position: relative;
+}
+
+.project-card__techs img,
+.tooltip > a > img {
+  height: auto;
+}
 /* ----------------------------------HEADER---------------------------------- */
 
 /* NAVBAR */
@@ -48,12 +157,10 @@ p {
 /* HERO */
 .hero {
   margin-bottom: 3rem;
-  display: flex;
   justify-content: space-between;
 }
 
 .hero__content {
-  padding-top: 1rem;
   width: 70%;
 }
 
@@ -64,34 +171,22 @@ p {
 
 .hero__subtitle {
   margin-block: 1rem;
-  font-size: 1.25rem;
-  hyphens: auto;
-}
-
-.hero__buttons {
-  justify-self: center;
 }
 
 .btn button {
   width: 10rem;
   margin-block: 0.5rem;
   padding: 0.5rem;
-  font-size: 1rem;
   font-weight: 500;
   background-color: rgb(190, 124, 0);
-  border-radius: 10px;
   cursor: pointer;
-  transition: 0.2s;
 }
 
 .btn button:hover {
   box-shadow: 0 0 8px rgba(190, 123, 0, 0.493);
-  transform: scale(1.05);
 }
 
 .hero__image {
-  padding-top: 1rem;
-  position: relative;
   animation: flutuar 2s ease-in-out infinite alternate;
 }
 
@@ -119,29 +214,17 @@ p {
 }
 
 /* PROJECTS */
-.projects__grid {
-  display: flex;
-  justify-content: space-evenly;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 1rem;
-}
 
 .project-card {
   background-color: rgba(190, 123, 0, 0.027);
-  border: 1px solid rgb(190, 124, 0);
   border-radius: 20px;
-  padding: 0.3rem;
   margin-right: 1.5rem;
-  flex: 0 0 auto; /* Faz o card NÃO encolher, e ficar do tamanho que você definir */
-  scroll-snap-align: start; /* faz o card "grudar" certinho no começo ao rolar */
   width: 15rem;
   height: 30rem;
 }
 
 .project-card__image {
   border: 1px solid black;
-  justify-self: center;
 }
 
 .project-card__image > img {
@@ -151,83 +234,38 @@ p {
 }
 
 .project-card__title {
-  justify-self: center;
-  font-size: 1.25rem;
   margin-bottom: 0.25rem;
 }
 
 .project-card__description {
-  font-size: 1rem;
   height: 12rem;
 }
 
 .project-card__techs {
-  display: flex;
   justify-content: start;
-  align-items: center;
   margin-block: 0.75rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 1rem;
 }
 
 .project-card__techs img {
   padding: 0.313rem;
   border: 1px solid #333;
-  margin-right: 1rem;
   width: 3.125rem;
-  height: auto;
 }
 
 .project-card__button {
-  display: flex;
   justify-content: center;
-  font-size: 1rem;
-}
-
-.project-card__button a:hover {
-  transform: scale(1.05);
-  transition: 0.2s;
 }
 
 /* SKILLS */
-.skills__grid {
-  display: flex;
-  justify-content: space-evenly;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 1rem;
-}
-
-.skills__item {
-  border: 1px solid rgb(190, 124, 0);
-  padding: 0.3rem;
-  border-radius: 10px;
-  margin-right: 1rem;
-  flex: 0 0 auto; /* Faz o card NÃO encolher, e ficar do tamanho que você definir */
-  scroll-snap-align: start; /* faz o card "grudar" certinho no começo ao rolar */
-}
-
-.skills__item img {
-  height: 6.25rem;
-}
 
 /* ----------------------------------FOOTER---------------------------------- */
-.footer__socials {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 6.25rem;
-}
 
 .tooltip {
-  position: relative;
   display: inline-block;
 }
 
 .tooltip > a > img {
   width: 3.25rem;
-  height: auto;
 }
 
 .tooltip-text {
@@ -253,35 +291,32 @@ p {
   opacity: 1;
 }
 
+/* Tablet (481px a 768px) */
+@media (min-width: 481px) {
+  /* HERO */
+  .hero__content {
+    width: 75%;
+  }
+
+  .hero__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .hero__image > img {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+}
+
 /* Tablet (769px a 1024px) */
 @media (min-width: 769px) {
-  /* ----------------------------------ALL---------------------------------- */
-  header,
-  main,
-  main section {
-    margin-bottom: 3.125rem;
+  .navbar__links,
+  .hero {
+    align-items: center;
   }
-
-  main {
-    width: 90vw;
-    margin: auto;
-  }
-
-  .section-title {
-    font-size: 2.2rem;
-  }
-
-  .section-title,
-  .footer__socials {
-    margin-bottom: 1.25rem;
-  }
-
-  .navbar,
-  .footer {
-    width: 100%;
-  }
-
-  /* ----------------------------------HEADER---------------------------------- */
 
   /* NAVBAR */
   .navbar {
@@ -298,7 +333,7 @@ p {
   .navbar__links {
     display: flex;
     justify-content: center;
-    align-items: center;
+
     gap: 2rem;
   }
 
@@ -317,12 +352,6 @@ p {
   .hero {
     padding: 7.813rem 0.313rem 0.313rem 0.313rem;
     margin-bottom: 3.125rem;
-    align-items: center;
-    gap: 10rem;
-  }
-
-  .hero__content {
-    width: 28%;
   }
 
   .hero__title {
@@ -341,23 +370,54 @@ p {
     padding: 0.625rem;
   }
 
-  .hero__image {
-    animation: flutuar1441px 2s ease-in-out infinite alternate;
-  }
-
   .hero__image > img {
     width: 15.625rem;
     height: 15.625rem;
   }
+}
 
-  @keyframes flutuar1441px {
-    0% {
-      top: -0.938rem;
-    }
+/* Desktop (1025px a 1657px) */
+@media (min-width: 1025px) {
+  /* ----------------------------------ALL---------------------------------- */
+  header,
+  main,
+  main section {
+    margin-bottom: 3.125rem;
+  }
 
-    100% {
-      top: 0.938rem;
-    }
+  main {
+    width: 90vw;
+    margin: auto;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  /* ----------------------------------HEADER---------------------------------- */
+
+  /* HERO */
+  .hero {
+    justify-content: center;
+    gap: 10rem;
+  }
+
+  .hero__content {
+    width: 50%;
+  }
+
+  .hero__title {
+    font-size: 3.438rem;
+  }
+
+  .hero__buttons {
+    padding: 1rem;
+  }
+
+  .btn button {
+    width: 15rem;
+    padding: 1rem;
+    font-size: 1.125rem;
   }
 
   /* ----------------------------------MAIN---------------------------------- */
@@ -381,7 +441,6 @@ p {
 
   .project-card {
     padding: 0.313rem;
-    margin-right: 1.563rem;
     width: 18.75rem;
     height: 33.125rem;
   }
@@ -400,12 +459,6 @@ p {
     text-indent: 1.563rem;
     height: 9.688rem;
     line-height: 1.4;
-  }
-
-  .project-card__techs img {
-    padding: 0.313rem;
-    margin-right: 1.25rem;
-    width: 3.125rem;
   }
 
   /* SKILLS */
@@ -425,74 +478,18 @@ p {
   }
 }
 
-/* Desktop (1025px ou mais) */
-@media (min-width: 1025px) {
+/* Desktop (1441px ou mais) */
+@media (min-width: 1441px) {
   /* ----------------------------------ALL---------------------------------- */
-  header,
-  main,
-  main section {
-    margin-bottom: 3.125rem;
-  }
 
   main {
     width: 90vw;
     margin: auto;
   }
 
-  .section-title {
-    font-size: 2.2rem;
-  }
-
-  .section-title,
-  .footer__socials {
-    margin-bottom: 1.25rem;
-  }
-
-  .navbar,
-  .footer {
-    width: 100%;
-  }
-
   /* ----------------------------------HEADER---------------------------------- */
 
-  /* NAVBAR */
-  .navbar {
-    display: inline;
-    background-color: #fff;
-    padding: 1rem 2rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  .navbar__links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .navbar__link {
-    color: #333;
-    font-size: 1.1rem;
-    transition: color 0.3s;
-  }
-
-  .navbar__link:hover {
-    transform: scale(1.05);
-    transition: 0.2s;
-  }
-
   /* HERO */
-  .hero {
-    padding: 7.813rem 0.313rem 0.313rem 0.313rem;
-    margin-bottom: 3.125rem;
-    align-items: center;
-    gap: 10rem;
-  }
-
   .hero__content {
     width: 28%;
   }
@@ -501,37 +498,8 @@ p {
     font-size: 3.438rem;
   }
 
-  .hero__subtitle {
-    margin-block: 2.188rem;
-  }
-
   .hero__buttons {
-    justify-content: space-evenly;
-    padding: 0.313rem;
-  }
-
-  .btn button {
-    padding: 0.625rem;
-    font-size: 1.125rem;
-  }
-
-  .hero__image {
-    animation: flutuar1441px 2s ease-in-out infinite alternate;
-  }
-
-  .hero__image > img {
-    width: 15.625rem;
-    height: 15.625rem;
-  }
-
-  @keyframes flutuar1441px {
-    0% {
-      top: -0.938rem;
-    }
-
-    100% {
-      top: 0.938rem;
-    }
+    padding: 1rem;
   }
 
   /* ----------------------------------MAIN---------------------------------- */
@@ -553,13 +521,6 @@ p {
     scroll-margin-top: 5.75rem; /* altura da navbar */
   }
 
-  .project-card {
-    padding: 0.313rem;
-    margin-right: 1.563rem;
-    width: 18.75rem;
-    height: 33.125rem;
-  }
-
   .project-card__image > img {
     height: 12.5rem;
   }
@@ -576,12 +537,6 @@ p {
     line-height: 1.4;
   }
 
-  .project-card__techs img {
-    padding: 0.313rem;
-    margin-right: 1.25rem;
-    width: 3.125rem;
-  }
-
   /* SKILLS */
   .skills {
     padding: 0.313rem;
@@ -589,7 +544,6 @@ p {
   }
 
   /* ----------------------------------FOOTER---------------------------------- */
-
   .footer {
     padding: 0.313rem 5.001%;
   }
