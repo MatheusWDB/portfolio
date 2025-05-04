@@ -78,7 +78,7 @@ p,
 .skills__grid {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .btn button:hover,
@@ -203,10 +203,7 @@ p,
   margin-right: 1.5rem;
   width: 15rem;
   height: 30rem;
-}
-
-.project-card__image {
-  border: 1px solid black;
+  position: relative;
 }
 
 .project-card__image > img {
@@ -220,7 +217,7 @@ p,
 }
 
 .project-card__description {
-  height: 12rem;
+  height: 11rem;
 }
 
 .project-card__techs {
@@ -236,6 +233,10 @@ p,
 
 .project-card__button {
   justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 /* ----------------------------------FOOTER---------------------------------- */
